@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:fragment="header(member)" class="top-bar">
+    <div class="content">
+        <img src="images/r-logo.jpg" alt="로고"
+             class="top-left logo" onclick="gohome()">
+        <h2 class="top-left top-home">AI Board</h2>
+        <nav class="top-right">
+            <ul>
+                <th:block th:if="${member == null}">
+                    <li><a th:href="@{loginForm}">Login</a></li>
+                    <li><a th:href="@{joinForm}">Join</a></li>
+                </th:block>
+                <th:block th:unless="${member == null}">
+                    <li th:text="${member.m_id}+'님'"></li>
+                    <li><a th:href="@{logout}">Logout</a></li>
+                </th:block>
+            </ul>
+        </nav>
+    </div>
+    <script th:inline="javascript">
+        const mem = [[${session.member}]];
+
+        function gohome(){
+            if(mem != null){//로그인 한 상태
+                location.href = "/boardList?pageNum=1";
+            } else {//로그인 안한 상태
+                location.href = "/";
+            }
+        }
+    </script>
+</div>
+<div th:fragment="footer" class="footer-bar">
+    <div class="content">
+        <div class="fcontents">
+            <img src="images/r-logo-v.png" class="footer-logo">
+            <span class="footer-txt">
+                &copy;AI Data Platform 2023
+            </span>
+        </div>
+    </div>
+</div>
+</body>
+</html>
