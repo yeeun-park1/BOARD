@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.aidata.springboard2.dao.MemberDaoTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-10-30T00:11:48" hostname="DESKTOP-Q8VF14L" time="2.584">
+  <properties/>
+  <testcase name="MemberDao insert" classname="com.aidata.springboard2.dao.MemberDaoTest" time="2.239"/>
+  <testcase name="MemberDao id check" classname="com.aidata.springboard2.dao.MemberDaoTest" time="0.342"/>
+  <system-out><![CDATA[09:11:46 [Test worker] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.aidata.springboard2.dao.MemberDaoTest]: MemberDaoTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+09:11:46 [Test worker] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.aidata.springboard2.Springboard2Application for test class com.aidata.springboard2.dao.MemberDaoTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.5)
+
+09:11:46 [Test worker] INFO  c.a.springboard2.dao.MemberDaoTest - Starting MemberDaoTest using Java 17.0.3 with PID 8620 (started by user in I:\spring-work\springboard2)
+09:11:46 [Test worker] INFO  c.a.springboard2.dao.MemberDaoTest - No active profile set, falling back to 1 default profile: "default"
+09:11:48 [Test worker] INFO  c.a.springboard2.dao.MemberDaoTest - Started MemberDaoTest in 2.143 seconds (process running for 4.304)
+09:11:48 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+09:11:49 [Test worker] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@4168f3d9
+09:11:49 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+09:11:50 [Test worker] INFO  jdbc.sqlonly - INSERT INTO member
+        VALUES ('user01','1111','사용자01','2023-01-01',
+                '인천시','01012345678',DEFAULT)
+
+09:11:50 [Test worker] INFO  jdbc.sqlonly - SELECT count(*) FROM member WHERE m_id='test'
+
+09:11:50 [Test worker] INFO  jdbc.resultset - 1. ResultSet.new ResultSet returned 
+09:11:51 [Test worker] INFO  jdbc.resultset - 1. ResultSet.getMetaData() returned com.mysql.cj.jdbc.result.ResultSetMetaData@39e3ea78 - Field level information: 
+	com.mysql.cj.result.Field@35e689a0[dbName=null,tableName=null,originalTableName=null,columnName=count(*),originalColumnName=null,mysqlType=8(FIELD_TYPE_BIGINT),sqlType=-5,flags= BINARY, charsetIndex=63, charsetName=ISO-8859-1]
+09:11:51 [Test worker] INFO  jdbc.resultset - 1. ResultSet.getType() returned 1003
+09:11:51 [Test worker] INFO  jdbc.resultset - 1. ResultSet.isClosed() returned false
+09:11:51 [Test worker] INFO  jdbc.resultset - 1. ResultSet.next() returned true
+09:11:51 [Test worker] INFO  jdbc.resultset - 1. ResultSet.getInt(count(*)) returned 1
+09:11:51 [Test worker] INFO  jdbc.resultset - 1. ResultSet.isClosed() returned false
+09:11:51 [Test worker] INFO  jdbc.resultsettable - 
+|---------|
+|count(*) |
+|---------|
+|1        |
+|---------|
+
+09:11:51 [Test worker] INFO  jdbc.resultset - 1. ResultSet.next() returned false
+09:11:51 [Test worker] INFO  jdbc.resultset - 1. ResultSet.close() returned void
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
